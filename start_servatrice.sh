@@ -6,9 +6,9 @@ if [ -f /usr/local/bin/servatrice ]
 then
   cd $HOME
   sudo killall servatrice
-  mkdir /home/ubuntu/.local/share/data/Cockatrice/Servatrice -p
-  sudo cp $HOME/servatrice.ini /home/ubuntu/.local/share/data/Cockatrice/Servatrice/servatrice.ini
+  mkdir /opt/cockatrice-server-ec2-setup/.local/share/data/Cockatrice/Servatrice/ -p
+  sudo cp $HOME/servatrice.ini /opt/cockatrice-server-ec2-setup/.local/share/data/Cockatrice/Servatrice/servatrice.ini
   #Start servatrice in background
-  /usr/local/bin/servatrice &
+  /usr/local/bin/servatrice --config /opt/cockatrice-server-ec2-setup/.local/share/data/Cockatrice/Servatrice/servatrice.ini &
 fi
 

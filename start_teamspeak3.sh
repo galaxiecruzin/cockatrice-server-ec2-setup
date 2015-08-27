@@ -2,7 +2,7 @@
 HOME=/opt/cockatrice-server-ec2-setup
 
 # Restart Teamspeak3
-if [ ! -f /$HOME/teamspeak3-server_linux-amd64/ts3server_startscript.sh ]
+if [ -f /$HOME/teamspeak3-server_linux-amd64/ts3server_startscript.sh ]
 then
   echo "Restarting ts3server..."
   cd $HOME
